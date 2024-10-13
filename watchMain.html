@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .flashscreen {
+            position: absolute;
+            width: 1350px;
+            height: 640px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #DA3068, #14469F);
+            display: block;
+        }
+
+        @keyframes aniflash {
+            0% {
+                opacity: 0.2;
+            }
+
+            10% {
+                opacity: 0.3;
+            }
+
+            20% {
+                opacity: 0.4;
+            }
+
+            30% {
+                opacity: 0.5;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+
+            60% {
+                opacity: 0.8;
+            }
+
+            70% {
+                opacity: 0.9;
+            }
+
+            80% {
+                opacity: none;
+            }
+
+        }
+
+        .logo {
+            border-radius: 40px;
+            left: 400px;
+            top: 60px;
+            position: absolute;
+            box-shadow: 10px 10px 15px 0px black;
+            display: block;
+            opacity: none;
+            animation: aniflash 1.5s;
+        }
+
+        .mainbody {
+
+            display: block;
+            background: rgb(51, 51, 51);
+            position: absolute;
+            width: 1350px;
+            height: 640px;
+            display: none;
+        }
+
+        .navbar {
+            background: #176d74;
+            position: absolute;
+            width: 1340px;
+            border-radius: 20px;
+            height: 50px;
+            box-shadow: 1px 1px 10px 0px black;
+        }
+
+        .imgh {
+            position: absolute;
+            top: 10px;
+            border-radius: 10px;
+            left: 0px;
+            animation: watch 2s;
+        }
+
+        @keyframes watch {
+            0% {
+                left: -1000px
+            }
+
+            100% {
+                left: 0px
+            }
+        }
+
+        .title {
+            position: absolute;
+            left: 710px;
+            top: 50px;
+            color: white;
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            animation: welto 2s;
+        }
+
+        @keyframes welto {
+            from {
+                left: -20px;
+            }
+
+            to {
+                left: 710px;
+            }
+        }
+
+        .titled {
+            position: absolute;
+            left: 1150px;
+            font-size: 40px;
+            top: 50px;
+            color: rgb(43, 193, 238);
+            font-family: 'Courier New', Courier, monospace;
+            animation: time 2.2s;
+        }
+
+        @keyframes time {
+            from {
+                top: -20px;
+            }
+
+            to {
+                top: 50px;
+            }
+        }
+
+        .titler {
+            position: absolute;
+            left: 970px;
+            font-size: 40px;
+            top: 50px;
+            color: rgb(238, 250, 71);
+            font-family: 'Courier New', Courier, monospace;
+            animation: orbit 2.2s;
+
+        }
+
+        @keyframes orbit {
+            from {
+                top: 1000px;
+            }
+
+            to {
+                top: 50px;
+            }
+        }
+
+        .abus {
+            color: rgb(186, 231, 101);
+            position: absolute;
+            left: 690px;
+            top: 195px;
+            font-family: cursive;
+            animation: letter 2s;
+        }
+
+        .er {
+            color: white;
+            position: absolute;
+            left: 690px;
+            top: 260px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+            ;
+            opacity: none;
+            animation: letter 2s;
+        }
+
+        @keyframes letter {
+            from {
+                opacity: 0.1;
+            }
+
+            to {
+                opacity: none;
+            }
+        }
+
+        .agree {
+            position: absolute;
+            left: 690px;
+            top: 500px;
+            background: #000;
+            border: none;
+            width: 30px;
+            color: grey;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+               .more:hover{
+                   opacity: 0.5;
+                   animation-name: bg 1s;
+animation-duration: 1s;               }
+               @keyframes bg {
+                   form{
+                          font-size:30px ;
+                   }
+                   to{font-size: 20px;}
+               }
+        .ag {
+            position: absolute;
+            left: 740px;
+            top: 481px;
+            color: grey;
+            font-family: cursive;
+        }
+
+        .more {
+            position: absolute;
+            left: 890px;
+            top: 560px;
+            color: rgb(255, 255, 255);
+            font-family: cursive;
+            background: #000;
+            width: 200px;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .aftermainbody {
+            display: none;
+        }
+    </style>
+
+    <div id="flashscreen" class="flashscreen">
+        <img id="logo" class="logo" src="./logo.webp" alt="logo" width="500px" height="500px">
+    </div>
+
+    <div id="mainbody" class="mainbody">
+
+        <img id="facewatch" class="imgh" src="./watchmain.avif" alt="img">
+        <h1 id="title" class="title"> WELCOME TO</h1>
+        <h1 id="para" class="titler">ORBITAL</h1>
+        <h1 id="para" class="titled">TIME</h1>
+        <h2 id="para" class="abus">About Us:</h2>
+        <h3 id="para" class="er">Lorem ipsum dolor sit amet consectetur adip
+            isicing elit. Hic, repellendus!
+            amet, consectetur adipisicing elit. Aut tenetur placeat officia quaerat.
+            Pariatur sit culpa laboriosam Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            soluta corporis nulla nobis, reprehenderit qui commodi veniam cupiditate cumque
+            vel, inventore magni pariatur nam incidunt autem alias excepturi.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, fugit!numquam </h3>
+
+        <input id="btn" class="agree" type="button" value="OK" onclick="press()">
+        <h3 id="ag" class="ag">I accept the terms and conditions.</h3>
+        <input type="button" class="more" id="start" value="Let's Start!">
+    </div>
+    <div id="aftermainbody" class="aftermainbody">
+        <h1>hellow 3rd page </h1>
+    </div>
+
+
+    <script src="jsw.js"></script>
+</body>
+
+</html>
